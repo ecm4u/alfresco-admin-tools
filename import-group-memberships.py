@@ -9,11 +9,11 @@ parser.add_argument("tenant", type=str, nargs="?", default="default")
 parser.add_argument("membersFile", type=str)
 parser.add_argument("username", type=str)
 parser.add_argument("password", type=str)
-parser.add_argument("url", type=str, default="http://alf-host/alfresco/service/api/groups")
+parser.add_argument("url", type=str, default="http://alf-host")
 args = parser.parse_args()
 
 tenant = args.tenant
-url_base = args.url
+url_base = args.url + "/alfresco/service/api/groups"
 if args.tenant != "default":
     username = args.username + "@" + args.tenant
 else:
