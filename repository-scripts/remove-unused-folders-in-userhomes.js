@@ -19,6 +19,8 @@ print("---");
 for each (var userhome in search.luceneSearch('PATH:"/app:company_home/app:user_homes"')[0].children) {
 	if (realUserhomes.indexOf("" + userhome.nodeRef) < 0) {
 		print("" + userhome.name + " is no real userhome, removing it");
-		// userhome.remove();
+		if (!userhome.isLocked) {
+			// userhome.remove();
+		}
 	}
 }

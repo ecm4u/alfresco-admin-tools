@@ -15,12 +15,12 @@ for each (var n in ps) {
 	var userhome = p.properties.homeFolder;
 	print("userhome: " + userhome.nodeRef);
 	for each (var uh in userhome.parent.children) {
-		var r = RegExp("^" + username + "-\\d+$");
+		var r = RegExp("^" + username + ".*$");
 		if (uh.name.match(r) && "" + uh.nodeRef != "" + userhome.nodeRef) {
 			print("matching userhome: " + uh.name);
 			for each (var c in uh.children) {
 				print("copy " + c.name);
-				// var cp = c.copy(userhome);
+				// var cp = c.copy(userhome, true);
 				// cp.setOwner(username);
 			}
 		}
