@@ -1,3 +1,11 @@
+/*
+ * Copy the content of folders that probably are old userhomes to
+ * the real userhomes.
+ *
+ * Copyright 2016 ecm4u GmbH
+ *
+ * Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/
+ */
 var ps = people.getPeople("");
 for each (var n in ps) {
 	print("---");

@@ -1,3 +1,11 @@
+/*
+ * Remove folders under userhomes that are no real userhome folders.
+ *
+ * Copyright 2016 ecm4u GmbH
+ *
+ * Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/
+ */
+
 var realUserhomes = [];
 for each (var n in people.getPeople("")) {
 	var p = search.findNode(n);
